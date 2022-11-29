@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5fc5d3adbaea4f669e9b32b154362f7d" Name="Diagram1">
+        <EntityTypeShape EntityType="Ribichenko_2Model.agents" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ribichenko_2Model.history_sales" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ribichenko_2Model.products" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ribichenko_2Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ribichenko_2Model.type_agent" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ribichenko_2Model.type_product" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="Ribichenko_2Model.FK_agents_history_sales" ManuallyRouted="false" />
+        <AssociationConnector Association="Ribichenko_2Model.FK_agents_type_agent" ManuallyRouted="false" />
+        <AssociationConnector Association="Ribichenko_2Model.FK_history_sales_agents" ManuallyRouted="false" />
+        <AssociationConnector Association="Ribichenko_2Model.FK_history_sales_products" ManuallyRouted="false" />
+        <AssociationConnector Association="Ribichenko_2Model.FK_products_type_product" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
