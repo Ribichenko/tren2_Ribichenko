@@ -44,6 +44,36 @@ namespace tren2_Ribichenko
                 abs.count = (int)coldrex.Sum();
             }
 
+            var db = Ribichenko_2Entities.GetContext().agents.ToList();
+
+            foreach (var abs in db)
+            {
+                //var P_A = abs.
+
+                double persent = (double)abs.history_sales1.Select(a => a.count_product * a.products.min_price).Sum();
+
+                if (persent < 10000 && persent >= 0)
+                {
+                    abs.sale = 0;
+                }
+                else if (persent > 10000 && persent < 50000)
+                {
+                    abs.sale = 5;
+                }
+                else if (persent > 50000 && persent < 150000)
+                {
+                    abs.sale = 10;
+                }
+                else if (persent > 150000 && persent < 500000)
+                {
+                    abs.sale = 20;
+                }
+                else
+                {
+                    abs.sale = 25;
+                }
+            }
+
 
         }
         

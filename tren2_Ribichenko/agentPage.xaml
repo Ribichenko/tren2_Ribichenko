@@ -17,10 +17,11 @@
         <ListView Grid.Row="2" Name="LV">
             <ListView.ItemTemplate>
                 <DataTemplate>
+                    
                     <Border HorizontalAlignment="Center"
                     BorderThickness="2"
                     BorderBrush="Black" Margin="20,3,20,3">
-
+                        
                         <Grid Margin="20">
                             <Grid.RowDefinitions>
 
@@ -32,7 +33,7 @@
 
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100"></ColumnDefinition>
-                                <ColumnDefinition Width="1040"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
                                 <ColumnDefinition Width="100"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
@@ -43,16 +44,18 @@
                             </StackPanel>
                                 <Image Source="/img/picture.png" Height="100" Width="100" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" ></Image>
                             <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Margin="15 0 0 0">
-                                <TextBlock Name="TB" Text="{Binding count}" Grid.Row="1"  Margin="5 0 0 0" FontSize="18" HorizontalAlignment="Left" Grid.Column="1"></TextBlock>
+                                <TextBlock Text="{Binding count}" Grid.Row="1"  Margin="5 0 0 0" FontSize="18" HorizontalAlignment="Left" Grid.Column="1"></TextBlock>
                                 <TextBlock FontSize="18" Margin="5 0 0 0" Text="продаж за год"></TextBlock>
                             </StackPanel>
                             <TextBlock Text="{Binding phone}" Grid.Row="2" Margin="20 0 0 0" HorizontalAlignment="Left" FontSize="18" Grid.Column="1"></TextBlock>
                             <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" Margin="20 0 0 0">
                                 <TextBlock FontSize="18" Text="Приоритетность: "></TextBlock>
-                                <TextBlock x:Name="textblock1"  Text="{Binding priority}" Grid.Row="3" Margin="5 0 0 0" FontSize="18" HorizontalAlignment="Left"  Grid.Column="1"></TextBlock>
+                                <TextBlock Text="{Binding priority}" Grid.Row="3" Margin="5 0 0 0" FontSize="18" HorizontalAlignment="Left"  Grid.Column="1"></TextBlock>
                             </StackPanel>
-                                <TextBlock Text="заглушечка" Grid.Row="0" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left"  Grid.Column="2" Grid.RowSpan="3"></TextBlock>
-
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="0" Grid.Column="2" Grid.RowSpan="3">
+                                <TextBlock Text="{Binding sale}" Grid.Row="0" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left"  Grid.Column="2" Grid.RowSpan="3"></TextBlock>
+                                <TextBlock Text="%" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left"></TextBlock>
+                            </StackPanel>
                         </Grid>
                     </Border>
                 </DataTemplate>
